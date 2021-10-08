@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* width: 99.7%; */
+}
+
+.App {
+  margin: 10px;
+}
+
+.first_sec {
+  border: 0.5px solid lightgrey;
+  width: 40%;
+  padding: 5px;
+}
+
+.filter {
+  margin: 20px;
+}
+
+label {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* .section_1 {
+  border: 1px solid lightgray;
+} */
+
+.second_sec {
+  width: 150%;
+  border: 0.5px solid lightgrey;
+}
+
+.header_item_container {
+  margin: 15px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input {
+  width: 400px;
+  padding: 4px;
+  padding-bottom: 6px;
+  border: none;
+  background-color: rgb(247, 243, 243);
+}
+
+.extras {
+  display: flex;
+}
+
+.list_item {
+  padding: 20px;
+  font-weight: bold;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.btn {
+  border: none;
+}
+
+.main_div {
+  display: flex;
+}
+
+.card_ele {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* margin-bottom: 60px; */
+  padding: 80px;
+  border: none;
+}
+
+.image {
+  height: 400px;
+  width: 300px;
+}
+
+/* .card_inner {
+  display: flex;
+  flex-direction: column;
+} */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  border: none;
+}
+
+span {
+  color: lightcoral;
+}
+
+.detail {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+}
