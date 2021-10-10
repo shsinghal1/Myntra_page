@@ -4,20 +4,14 @@ import Header from "./Header";
 import Cards from "./cards";
 import Filter from "./Filter";
 import Brand from "./Brand";
+import Category from "./Category";
 
 function App() {
   const [data, setData] = useState([]);
   const [genderVal, setGenderVal] = useState([]);
   const [isSelected, setIsSelected] = useState(false);
   const [getBrand, setBrand] = useState([]);
-
-  data &&
-    data.map((ele, ind) => {
-      if (!getBrand.includes(ele.brand)) {
-        // setBrand(...getBrand, ele.brand);
-        // console.log(ele.brand);
-      }
-    });
+  const [getCategory, setCategory] = useState([]);
 
   const getDataFromApi = async () => {
     const response = await fetch("https://demo7242716.mockable.io/products");
@@ -28,6 +22,26 @@ function App() {
   useEffect(() => {
     getDataFromApi();
   }, []);
+
+  useEffect(() => {
+    // console.log("brand useEffect triggered");
+    data &&
+      data.map((ele) => {
+        if (!getBrand.includes(ele.brand)) {
+          setBrand([...getBrand, ele.brand]);
+          // console.log(ele.brand);
+        }
+      });
+  });
+
+  useEffect(() => {
+    data &&
+      data.map((ele) => {
+        if (!getCategory.includes(ele.category)) {
+          setCategory([...getCategory, ele.category]);
+        }
+      });
+  });
 
   return (
     <div className="App">
@@ -42,6 +56,7 @@ function App() {
             setGenderVal={setGenderVal}
           />
           {getBrand && <Brand getBrand={getBrand} />}
+          {getCategory && <Category getCategory={getCategory} />}
         </div>
         <div className="second_sec">
           <div className="card_ele">

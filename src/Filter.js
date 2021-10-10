@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+// import { useState } from "react";
 
 function Filter({ data, setGenderVal, genderVal, setIsSelected, isSelected }) {
   const selectHandler = (e) => {
@@ -47,9 +47,6 @@ function Filter({ data, setGenderVal, genderVal, setIsSelected, isSelected }) {
         <label for="girls"> &nbsp; Girls </label> <br />
       </div>
       <hr />
-      {/* <div className="categories">CATEGORIES</div>
-      <div className="brand">BRAND</div>
-      <div className="price">PRICE</div> */}
     </div>
   );
 }

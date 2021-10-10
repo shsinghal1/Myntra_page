@@ -1,22 +1,20 @@
-// import React, { useState } from "react";
+import React from "react";
 
-function Brand({ getBrand }) {
-  //   console.log(getBrand);
-
+function Category({ getCategory }) {
   const selectHandler = () => {};
 
   return (
     <>
-      <h4 className="heading">Brand</h4>
+      <h4 className="heading">Category</h4>
       <div className="filter">
-        {getBrand.map((item, id) => {
+        {getCategory.map((item, id) => {
           return (
             <div key={id}>
               <input
                 onClick={selectHandler}
                 name="brand"
                 type="radio"
-                value={item.brand}
+                value={item.category}
                 style={{
                   height: "16px",
                   width: "16px",
@@ -33,4 +31,4 @@ function Brand({ getBrand }) {
   );
 }
 
-export default Brand;
+export default Category;
